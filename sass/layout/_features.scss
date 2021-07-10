@@ -1,0 +1,39 @@
+.features{
+    padding: 94px 0;
+}
+.section-pb0{
+    padding-bottom: 0px;
+}
+.features__title{
+    color: var(--title-text-color);
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+.features__text{
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--normal-text-color);
+}
+.features__box{
+    width: calc((100%-90px) / 4);
+    width: 270px;
+}
+.features__icons{
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+.features__card{
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}

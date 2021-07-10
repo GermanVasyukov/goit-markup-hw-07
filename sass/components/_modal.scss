@@ -1,0 +1,202 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.backdrop.is-hidden .modal{
+    transform:  translate(-50%, -50%) scale(0.9);
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    min-height: 581px;
+    min-width: 528px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 12%), 0px 1px 1px rgba(0, 0, 0, 14%), 0px 2px 1px rgba(0, 0, 0, 20%);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button__icon{
+    width: 18px;
+    height: 18px;
+    
+}
+.button__close{
+    display: block;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button__close:hover{
+    cursor: pointer;
+    fill: var(--accent-color);
+}
+.modal__title{
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: var(--title-text-color);
+}
+.modal__form{
+    padding: 40px;
+}
+.form__list{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.form__list label{
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--normal-text-color);
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__list input{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 40px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__list textarea:focus,
+.form__list input:focus,
+.form__list textarea:hover,
+.form__list input:hover{
+    border-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.form__list input:hover + .form__icon,
+.form__list input:focus + .form__icon{
+    fill: var(--accent-color);
+}
+
+.form__list textarea{
+    min-height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px; 
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 63%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    left: 12px;
+}
+.form__list textarea::placeholder{
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+[for="modal-contract"] {
+    display: flex;
+}
+#modal-contract{
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    align-items: center;
+}
+.checkbox__text{
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--normal-text-color);
+}
+.checkbox__text a{
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+.checkbox__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    cursor: pointer;
+    width: 16px;
+    height: 15px;    
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 2px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #FFFFFF;
+}
+.checkbox:checked+.checkbox__box {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.checkbox__button{
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 30px;
+    font-family: Roboto;
+    
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    align-self: center;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+.checkbox__button:hover,
+.checkbox__button:focus{
+    background: #147fd6;
+    cursor: pointer;
+}

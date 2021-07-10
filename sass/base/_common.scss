@@ -1,0 +1,47 @@
+html, 
+body{
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul,
+li{
+    list-style: none;
+}
+button{
+    border: none;
+}
+section{
+    padding: 94px 0;
+}
+.clients{
+    padding: 94px 0;
+}
+.page {
+    background-color: #FFFFFF;
+    color: var(--normal-text-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    line-height: 1.9;
+    font-style: normal;
+}
+/* section */
+.hiden{
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

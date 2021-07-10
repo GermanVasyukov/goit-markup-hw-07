@@ -1,0 +1,77 @@
+.team{
+    background-color: #F5F4FA;
+}
+.team .title{
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    padding-bottom: 50px;
+}
+.team__card{
+    width: calc((100%-90px) / 4);
+    width: 270px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.team .employee__name{
+    color: var(--title-text-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.team .employee__position{
+    color: var(--normal-text-color);
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;   
+}
+.employee{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.networks__list{
+    display: flex;    
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 16px;
+    border-radius: 50%;
+}
+.networks__box:not(:last-child){
+    margin-right: 10px;
+}
+.networks__link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #AFB1B8;
+    border-radius: 50%;
+
+    transition-property: background, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.networks__link:hover,
+.networks__link:focus{
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    fill: #FFFFFF;
+}
+.networks__icon{
+    width: 20px;
+    height: 20px;
+}
